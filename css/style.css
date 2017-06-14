@@ -1,0 +1,128 @@
+/*фон*/
+body {
+  background: darkgrey;
+}
+
+/* Базовый контейнер табов */
+.tabs {
+  min-width: 320px;
+  max-width: 1000px;
+  padding: 10px;
+  margin: 0 auto;
+}
+/* Стили секций с содержанием */
+.tabs>section {
+  display: none;
+  padding: 15px;
+  background: white;
+  border: 1px solid #ddd;
+}
+/* Описываем анимацию свойства opacity */
+ 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Прячем чекбоксы */
+.tabs>input {
+  display: none;
+  position: absolute;
+}
+/* Стили переключателей вкладок (табов) */
+.tabs>label {
+  display: inline-block;
+  margin: 0 0 -2px;
+  padding: 5px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: lightgrey;
+  border: 0px solid #ddd;
+  border-width: 1px 1px 1px 1px;
+  background: grey;
+  border-radius: 30px 15px 0 0;
+}
+
+/* Изменения стиля переключателей вкладок при наведении */
+ 
+.tabs>label:hover {
+  color: white;
+  cursor: pointer;
+  background: black;
+}
+/* Стили для активной вкладки */
+.tabs>input:checked+label {
+  color: black;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid white;
+  background: white;
+}
+/* Активация секций с помощью псевдокласса :checked */
+#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4, #tab5:checked~#content-tab5, #tab6:checked~#content-tab6, #tab7:checked~#content-tab7, #tab8:checked~#content-tab8, #tab9:checked~#content-tab9 {
+  display: block;
+}
+/* Убираем текст с переключателей 
+* и оставляем иконки на малых экранах
+*/
+@media screen and (max-width: 210px) {
+  .tabs>label {
+    font-size: 12px;
+    font-weight: 100;
+  }
+  .tabs>label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+/* Изменяем внутренние отступы 
+*  переключателей для малых экранов
+*/
+@media screen and (max-width: 400px) {
+  .tabs>label {
+    padding: 15px;
+  }
+}
+/*Стиль изображений*/
+img {
+  border-image: 10px;
+  max-width: 200px;
+  float: left;
+  padding-right: 10px;
+}
+/*Стиль заголовков*/
+h1 {
+  color: black;
+  text-align: center;
+  font-family: Courier;
+}
+/*Стиль таблицы*/
+td {
+    border-bottom: 1px solid #ddd;
+}
+/*Раскрашиваем кнопки*/
+button {
+    background-color: grey;
+    color: white;
+    border: 2px solid darkgrey; 
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+/*Кнопка при наведении мыши*/
+button:hover {
+  background-color: lightgrey;
+  border: 2px solid grey; 
+  color: black;
+}
