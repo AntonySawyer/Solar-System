@@ -1,6 +1,6 @@
 /*фон*/
 body {
-  background: black;
+  background: darkgrey;
 }
 
 /* Базовый контейнер табов */
@@ -64,8 +64,8 @@ body {
 /* Стили для активной вкладки */
 .tabs>input:checked+label {
   color: black;
-  border-top: 1px solid #009933;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid white;
   background: white;
 }
 /* Активация секций с помощью псевдокласса :checked */
@@ -102,8 +102,9 @@ img {
 }
 /*Стиль заголовков*/
 h1 {
-  color: red;
+  color: black;
   text-align: center;
+  font-family: Courier;
 }
 /*Стиль таблицы*/
 td {
@@ -111,10 +112,17 @@ td {
 }
 /*Раскрашиваем кнопки*/
 button {
-    background-color: white;
-    color: black;
-    border: 2px solid grey; 
+    background-color: grey;
+    color: white;
+    border: 2px solid darkgrey; 
     width: 200px;
     height: 50px;
-    
+    font-size: 18px;
+    border-radius: 5px;
+}
+/*Кнопка при наведении мыши*/
+button:hover {
+  background-color: lightgrey;
+  border: 2px solid grey; 
+  color: black;
 }
