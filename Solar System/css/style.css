@@ -7,27 +7,15 @@ body {
 .tabs {
   min-width: 320px;
   max-width: 1000px;
-  padding: 0px;
+  padding: 10px;
   margin: 0 auto;
 }
 /* Стили секций с содержанием */
 .tabs>section {
   display: none;
   padding: 15px;
-  background: #fff;
+  background: white;
   border: 1px solid #ddd;
-}
-.tabs>section>p {
-  margin: 0 0 5px;
-  line-height: 1.5;
-  color: #383838;
-  /* прикрутим анимацию */
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
 }
 /* Описываем анимацию свойства opacity */
  
@@ -55,29 +43,30 @@ body {
 /* Стили переключателей вкладок (табов) */
 .tabs>label {
   display: inline-block;
-  margin: 0 0 -1px;
-  padding: 15px 25px;
+  margin: 0 0 -2px;
+  padding: 5px 25px;
   font-weight: 600;
   text-align: center;
-  color: #aaa;
+  color: lightgrey;
   border: 0px solid #ddd;
   border-width: 1px 1px 1px 1px;
-  background: #f1f1f1;
-  border-radius: 3px 3px 0 0;
+  background: grey;
+  border-radius: 30px 15px 0 0;
 }
 
 /* Изменения стиля переключателей вкладок при наведении */
  
 .tabs>label:hover {
-  color: #888;
+  color: white;
   cursor: pointer;
+  background: black;
 }
 /* Стили для активной вкладки */
 .tabs>input:checked+label {
-  color: #555;
+  color: black;
   border-top: 1px solid #009933;
   border-bottom: 1px solid #fff;
-  background: #fff;
+  background: white;
 }
 /* Активация секций с помощью псевдокласса :checked */
 #tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4, #tab5:checked~#content-tab5, #tab6:checked~#content-tab6, #tab7:checked~#content-tab7, #tab8:checked~#content-tab8, #tab9:checked~#content-tab9 {
@@ -86,10 +75,10 @@ body {
 /* Убираем текст с переключателей 
 * и оставляем иконки на малых экранах
 */
- 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 210px) {
   .tabs>label {
-    font-size: 0;
+    font-size: 12px;
+    font-weight: 100;
   }
   .tabs>label:before {
     margin: 0;
